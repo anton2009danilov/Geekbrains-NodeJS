@@ -4,6 +4,8 @@ const _ = require('lodash');
 const moment = require('moment');
 const winston = require('winston');
 const lineReader = require('line-reader');
+const path = require('path');
+const log_path = path.join(__dirname, '/', 'results.log');
 const { read } = require('fs');
 
 
@@ -16,7 +18,7 @@ const logger = winston.createLogger({
     // - Write all logs with level `info` and below to `combined.log`
     //
     new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'results.log' }),
+    new winston.transports.File({ filename: log_path }),
   ],
 });
 
@@ -93,7 +95,6 @@ rl.question(question, function(answer) {
             end_game_words = 'проиграли, повезёт в другой раз\n';
     
         
-    
         console.log('\nВаш выбор: ' + answer_word);
         console.log('Бросаем монетку');
         console.log('Результат: ' + result_word);
