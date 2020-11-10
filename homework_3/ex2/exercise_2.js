@@ -45,9 +45,13 @@ translateRouter.get('/:str', (req, res) => {
     const str = req.params.str;
     translate(str);
 
-    let result = fs.readFileSync('translate_result.txt', 'utf8');
+    // let result = fs.readFileSync('translate_result.txt', 'utf8');
+    let result;
 
-    res.send(result);
+    setTimeout(() => result = fs.readFileSync('translate_result.txt', 'utf8'), 2000);
+    setTimeout(() => console.log(fs.readFileSync('translate_result.txt', 'utf8')), 2000);
+    setTimeout(() => res.send(result), 2100);
+    // res.send(result);
 });
 
 app.use('/api/v1/translate', translateRouter);

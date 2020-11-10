@@ -3,8 +3,8 @@ const fs = require('fs');
 
 const IAM_TOKEN = 't1.9f7L7euelZrPzpvNyc2ckpOZksyTnZfJxuX090orVwL67094W9bd9PcKWlQC-u9PeFvW.CcvEsi3ancoVgCHHAW_BO7LPS-6tZDMUXFQrkMvAWVWLKBlS11qpsKllciKro0Yx3zWkijYWmE7X30ui1z1lBw';
 const FOLDER = 'b1gr1rrj3mgiq20uild5'
-let eng_string = 'It eat it';
-// let eng_string = 'Mother was washing frame';
+// let eng_string = 'It eat it';
+let eng_string = 'Mother was washing frame';
 
 
 const translate = function(str) {
