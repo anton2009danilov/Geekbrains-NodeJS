@@ -3,7 +3,7 @@ const fs = require('fs');
 const request = require('request');
 const cheerio = require('cheerio');
 const path = require('path');
-const main_path = path.join(__dirname, '/news', 'main.json');
+const main_path = path.join(__dirname, '/news', 'news.json');
 const koronavirus_path = path.join(__dirname, '/', 'koronavirus.json');
 
 request('https://yandex.ru/news/', function (error, response, html) {
