@@ -6,7 +6,6 @@ const winston = require('winston');
 const lineReader = require('line-reader');
 const path = require('path');
 const log_path = path.join(__dirname, '/', 'results.log');
-const { read } = require('fs');
 
 
 const logger = winston.createLogger({
